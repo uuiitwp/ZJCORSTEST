@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZJCORSTEST.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="6*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Text="IP" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium"></Label>
+        <Entry x:Name="IP" Grid.Column="1" Text="223.4.77.96" Grid.ColumnSpan="3" VerticalTextAlignment="Center"  VerticalOptions="Center" HorizontalTextAlignment="Center"></Entry>
+        <Label Text="端口" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Row="1"></Label>
+        <Entry x:Name="PORT" Grid.Column="1" Grid.Row="1" Text="17580"  Grid.ColumnSpan="3" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" ></Entry>
+        <Label Text="用户名" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Row="2"></Label>
+        <Entry x:Name="USER" Grid.Column="1" Grid.Row="2" Text="test"  Grid.ColumnSpan="3" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" ></Entry>
+        <Label Text="密码" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Row="3"></Label>
+        <Entry x:Name="PWD" Grid.Column="1" Grid.Row="3" Text="test" IsPassword="True"  Grid.ColumnSpan="3" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" ></Entry>
+        <Label Text="源节点" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Row="4" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+        <Picker x:Name="MP" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" VerticalTextAlignment="Center" VerticalOptions="Center"></Picker>
+        <Button Text="获取" Grid.Column="3" Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Button_Clicked_1"></Button>
+        <Label Text="概略位置BLH" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Row="5" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
+        <Entry x:Name="B" Grid.Column="1" Grid.Row="5" Text="30.00000"  VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" ></Entry>
+        <Entry x:Name="L" Grid.Column="2" Grid.Row="5" Text="120.00000"  VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" ></Entry>
+        <Entry x:Name="H" Grid.Column="3" Grid.Row="5" Text="0.00"  VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" ></Entry>
+        <ScrollView x:Name="ScrollView1" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4">
+            <StackLayout x:Name="StackLayout1" ></StackLayout>
+        </ScrollView>
+        <Button Text="清空" Grid.Column="0" Grid.Row="7" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Button_Clicked_2"></Button>
+        <Button Text="运行" Grid.Column="3" Grid.Row="7" VerticalOptions="Center" HorizontalOptions="Center" Clicked="Button_Clicked"></Button>
+    </Grid>
+</ContentPage>
